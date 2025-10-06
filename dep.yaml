@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: sboot-demo
+  name: sboot-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sboot-demo
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: sboot-demo
+    spec:
+      containers:
+      - image: adarsh011/demo1
+        name: demo1
+        ports:
+        - containerPort: 9090
+        resources: {}
+status: {}
