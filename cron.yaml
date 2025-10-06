@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cron
+spec:
+  jobTemplate:
+    metadata:
+      name: cron
+    spec:
+      template:
+        metadata: {}
+        spec:
+          containers:
+          - image: hello-world
+            name: cron
+            resources: {}
+          restartPolicy: OnFailure
+status: {}
