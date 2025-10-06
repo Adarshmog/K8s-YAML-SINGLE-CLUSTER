@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: amazon
+  name: amazon
+  namespace: adarsh
+spec:
+  containers:
+  - image: adarsh011/amazon-app:v1
+    name: amazon
+    ports:
+    - containerPort: 8087
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
