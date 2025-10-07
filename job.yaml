@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: test
+spec:
+  template:
+    metadata: {}
+    spec:
+      containers:
+      - image: hello-world
+        name: test
+        resources: {}
+      restartPolicy: Never
+status: {}

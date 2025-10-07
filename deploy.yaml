@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: demo1-deploy
+  name: demo1-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo1-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: demo1-deploy
+    spec:
+      containers:
+      - image: adarsh011/demo1
+        name: demo1
+        ports:
+        - containerPort: 8087
+        resources: {}
+status: {}
